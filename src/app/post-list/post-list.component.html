@@ -1,0 +1,20 @@
+  <ul class="list-group">
+    <li [ngClass]="{'list-group-item': true ,
+                   'list-group-item-success' : [loveIts] > 0,
+                   'list-group-item-danger' : [loveIts] < 0}">
+      <span class="badge">{{created_at| date: 'short'}}</span>
+      <h2>{{title}}</h2>
+      <p>   {{ content }}</p>
+
+      <button class="btn btn-success"
+              (click)="onLoveIt()">
+        love it
+      </button>
+      |
+      <button class="btn btn-danger"
+              (click)="onDontLoveIt()">
+        don't love it
+      </button>
+
+    </li>
+  </ul>
